@@ -115,3 +115,45 @@ Host: kist User: queryuser Database: querydb
 mysql: [Warning] Using a password on the command line interface can be insecure.
 
 ```
+
+# Insert data into MongoDB collection
+
+## Export data to CSV
+
+It is done already, data is exported to *export* directory.
+
+Configure access to MySQL database in *resource.rc* file.<br>
+
+Export data
+
+> vi run.sh<br>
+
+Uncomment
+```
+main export
+
+```
+
+> ./run.sh
+```
+Export offices to export/offices.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export employees to export/employees.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export customers to export/customers.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export orders to export/orders.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export productlines to export/productlines.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export products to export/products.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export orderdetails to export/orderdetails.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Export payments to export/payments.csv
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+```
+
+## Configure access to MongoDB
+
