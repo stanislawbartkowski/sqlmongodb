@@ -50,6 +50,7 @@ Configure access data.
 > vi resource.rc<br>
 
 | Parameter | Value
+| --- | ---- |
 | DBTYPE | mysql 
 | DBHOST | kist
 | DBUSER | queryuser
