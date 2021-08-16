@@ -13,3 +13,12 @@ Remove *classicmodels* if exists.
 Load sample data.<br>
 
 >mysql -h /<host name/> kist -u root -p <db.orig/mysqlsampledatabase.sql <br>
+
+# Files description
+
+| File | Content |
+| ---- | ------- |
+| sqlscript/createtables.sql  | DDL to create table, keys and primary keys
+| sqlscript/droptable.sql | Drop all tables, clear
+| sqlscript/addconstraints.sql | DDL to create foreign keys
+| insert/table_name/.sql | SQL script inserting the data. For instance: insertcustomers.sql : insert rows into *customers* table
