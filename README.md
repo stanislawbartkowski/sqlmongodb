@@ -155,5 +155,25 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 
 ```
 
-## Configure access to MongoDB
+## Create MongoDB database
 
+As cluster *userAdmin* create the user having *userAdmin* role in *querydb* database. It is the only moment where *clusterAdmin* authority is required.
+
+>  mongo mongodb://userAdmin:c5xgfwVZwfS4u66r@kist  --authenticationDatabase 'admin'<br>
+>  use querydb<br>
+>  db.createUser( { user: 'userAdmin', pwd: 'secret', roles: [ { role: 'userAdmin', db: 'querydb' } ] } );<br>
+
+As *querydb* *userAdmin* create *dbAdmin* role in *querydb* database.
+
+> mongo mongodb://userAdmin:secret@kist/querydb --authenticationDatabase 'querydb'<br>
+> use querydb<br>
+> db.createUser( { user: 'dbAdmin', pwd: 'secret', roles: [ { role: 'dbAdmin', db: 'querydb' } ] } );
+
+## Configure MongoDB access 
+
+> vi resource.rc<br>
+
+| Parameter | Description | Example
+| ---- | ----- | ----- |
+| MONGOURI | Connection string  | mongodb://dbAdmin:secret@kist/querydb
+| MONGODB |  MongoDB database | querydb
