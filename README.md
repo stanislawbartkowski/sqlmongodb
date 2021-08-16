@@ -18,7 +18,7 @@ Load sample data.<br>
 
 | File | Content |
 | ---- | ------- |
-| sqlscript/createtables.sql  | DDL to create table, keys and primary keys
+| sqlscript/createtables.sql  | DDL to create table, keys and primary keys 
 | sqlscript/droptable.sql | Drop all tables, clear
 | sqlscript/addconstraints.sql | DDL to create foreign keys
 | insert/table_name/.sql | SQL script inserting the data. For instance: insertcustomers.sql : insert rows into *customers* table
@@ -27,6 +27,7 @@ Load sample data.<br>
 
 > cp template/resource.rc resource.rc<br>
 > vi resource.rc<br>
+
 | Parameter | Description | Example
 | ---- | ---- | ---- |
 | DBTYPE | Database type | mysql 
