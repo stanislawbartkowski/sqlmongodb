@@ -25,4 +25,16 @@ Load sample data.<br>
 
 # Configure
 
+> cp template/resource.rc resource.rc<br>
+> vi resource.rc<br>
+| Parameter | Description | Example
+| ---- | ---- | ---- |
+| DBTYPE | Database type | mysql 
+| DBHOST | Database hostname | kist
+| DBUSER | Database user authorized to insert data into database | queryuser
+| DBPASSWORD | Password for DBUSER | secret
+| DB | Database | querydb
+
+
+
 
