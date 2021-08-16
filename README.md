@@ -38,14 +38,14 @@ Load sample data.<br>
 
 # Insert data into MySQL database
 
-## Create database.
+## Create database
 
 > create database querydb;<br>
 > CREATE USER 'queryuser'@'%' IDENTIFIED BY 'secret';<br>
 > GRANT ALL PRIVILEGES ON querydb.* TO 'queryuser'@'%';<br>
 
 
-## Configure access data.
+## Configure access data
 
 > vi resource.rc<br>
 
@@ -57,7 +57,7 @@ Load sample data.<br>
 | DBPASSWORD | secret
 | DB | querydb
 
-## Test connection.
+## Test connection
 
 > vi run.sh<br>
 
@@ -73,7 +73,7 @@ OK
 
 ```
 
-## Create database schema.
+## Create database schema
 > vi run.sh<br>
 
 Uncomment
@@ -87,6 +87,42 @@ Create tables
 Host: kist User: queryuser Database: querydb
 mysql: [Warning] Using a password on the command line interface can be insecure.
 Create constraints
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+```
+## Load data
+> vi run.sh<br>
+
+Uncomment
+```
+main insert
+```
+
+> ./run.sh
+```
+Insert offices
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert employees
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert customers
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert orders
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert productlines
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert products
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert orderdetails
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Insert payments
 Host: kist User: queryuser Database: querydb
 mysql: [Warning] Using a password on the command line interface can be insecure.
 
