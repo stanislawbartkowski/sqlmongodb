@@ -38,14 +38,14 @@ Load sample data.<br>
 
 # Insert data into MySQL database
 
-Create database.
+## Create database.
 
 > create database querydb;<br>
 > CREATE USER 'queryuser'@'%' IDENTIFIED BY 'secret';<br>
 > GRANT ALL PRIVILEGES ON querydb.* TO 'queryuser'@'%';<br>
 
 
-Configure access data.
+## Configure access data.
 
 > vi resource.rc<br>
 
@@ -57,4 +57,36 @@ Configure access data.
 | DBPASSWORD | secret
 | DB | querydb
 
+## Test connection.
 
+> vi run.sh<br>
+
+Uncomment.
+```
+main test
+```
+> ./run.sh
+```
+Test mysql connection
+mysql: [Warning] Using a password on the command line interface can be insecure.
+OK
+
+```
+
+## Create database schema.
+> vi run.sh<br>
+
+Uncomment
+```
+main create
+```
+./run.sh
+```
+Create tables
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Create constraints
+Host: kist User: queryuser Database: querydb
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+```
