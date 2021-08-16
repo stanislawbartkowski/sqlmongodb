@@ -163,11 +163,11 @@ As cluster *userAdmin* create the user having *userAdmin* role in *querydb* data
 >  use querydb<br>
 >  db.createUser( { user: 'userAdmin', pwd: 'secret', roles: [ { role: 'userAdmin', db: 'querydb' } ] } );<br>
 
-As *querydb* *userAdmin* create *dbAdmin* role in *querydb* database.
+As *querydb* *userAdmin* create *dbOwner* role in *querydb* database.
 
 > mongo mongodb://userAdmin:secret@kist/querydb --authenticationDatabase 'querydb'<br>
 > use querydb<br>
-> db.createUser( { user: 'dbAdmin', pwd: 'secret', roles: [ { role: 'dbAdmin', db: 'querydb' } ] } );
+> db.createUser( { user: 'dbOwner', pwd: 'secret', roles: [ { role: 'dbOwner', db: 'querydb' } ] } );
 
 ## Configure MongoDB access 
 
@@ -175,5 +175,28 @@ As *querydb* *userAdmin* create *dbAdmin* role in *querydb* database.
 
 | Parameter | Description | Example
 | ---- | ----- | ----- |
-| MONGOURI | Connection string  | mongodb://dbAdmin:secret@kist/querydb
+| MONGOURI | Connection string  | mongodb://dbOwner:secret@kist/querydb
 | MONGODB |  MongoDB database | querydb
+
+> vi run.sh<br>
+
+Uncomment
+```
+main importmongo
+
+```
+>./run.sh<br>
+```
+Import export/offices.csv
+2021-08-16T20:23:10.879+0200	using write concern: &{majority false 0}
+2021-08-16T20:23:10.879+0200	using 8 decoding workers
+2021-08-16T20:23:10.879+0200	using 1 insert workers
+2021-08-16T20:23:10.880+0200	will listen for SIGTERM, SIGINT, and SIGKILL
+2021-08-16T20:23:12.122+0200	reading from stdin
+2021-08-16T20:23:12.122+0200	using fields: officeCode,city,phone,addressLine1,addressLine2,state,country,postalCode,territory
+2021-08-16T20:23:12.122+0200	connected to: mongodb://[**REDACTED**]@kist/querydb
+2021-08-16T20:23:12.123+0200	ns: querydb.offices
+2021-08-16T20:23:12.322+0200	connected to node type: mongos
+
+................
+```
