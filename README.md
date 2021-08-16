@@ -32,9 +32,9 @@ Load sample data.<br>
 | ---- | ---- | ---- |
 | DBTYPE | Database type | mysql 
 | DBHOST | Database hostname | kist
-| DBUSER | Database user authorized to insert data into database | queryuser
-| DBPASSWORD | Password for DBUSER | secret
-| DB | Database | querydb
+| DBUSER | Database user authorized to insert data into database  *DB* | queryuser
+| DBPASSWORD | Password for *DBUSER* | secret
+| DB | Database name | querydb
 
 
 
