@@ -8,4 +8,5 @@ Remove *classicmodels* if exists.
 
 > drop database classicmodels;<br>
 <br>
->  mysql -h /<host name/> kist -u root -p <db.orig/mysqlsampledatabase.sql 
+
+>mysql -h /<host name/> kist -u root -p <db.orig/mysqlsampledatabase.sql <br>
