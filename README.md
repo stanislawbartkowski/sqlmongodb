@@ -36,6 +36,10 @@ Load sample data.<br>
 | DBPASSWORD | Password for *DBUSER* | secret
 | DB | Database name | querydb
 
+# Insert data into MySQL database
 
+Configure access data.
+
+> vi resource.rc<br>
 
 
