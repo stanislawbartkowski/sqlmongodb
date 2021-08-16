@@ -38,8 +38,22 @@ Load sample data.<br>
 
 # Insert data into MySQL database
 
+Create database.
+
+> create database querydb;<br>
+> CREATE USER 'queryuser'@'%' IDENTIFIED BY 'secret';<br>
+> GRANT ALL PRIVILEGES ON querydb.* TO 'queryuser'@'%';<br>
+
+
 Configure access data.
 
 > vi resource.rc<br>
+
+| Parameter | Value
+| DBTYPE | mysql 
+| DBHOST | kist
+| DBUSER | queryuser
+| DBPASSWORD | secret
+| DB | querydb
 
 
