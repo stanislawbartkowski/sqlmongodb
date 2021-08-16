@@ -2,18 +2,6 @@
 
 https://www.mysqltutorial.org/mysql-sample-database.aspx
 
-# Load data into MySQL
-
-Remove *classicmodels* if exists.
-
-> drop database classicmodels;<br>
-<br>
-
-
-Load sample data.<br>
-
->mysql -h /<host name/> kist -u root -p <db.orig/mysqlsampledatabase.sql <br>
-
 # Files description
 
 | File | Content |
