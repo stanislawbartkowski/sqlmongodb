@@ -22,3 +22,7 @@ Load sample data.<br>
 | sqlscript/droptable.sql | Drop all tables, clear
 | sqlscript/addconstraints.sql | DDL to create foreign keys
 | insert/table_name/.sql | SQL script inserting the data. For instance: insertcustomers.sql : insert rows into *customers* table
+
+# Configure
+
+
