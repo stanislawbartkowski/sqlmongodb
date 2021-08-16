@@ -80,7 +80,8 @@ Uncomment
 ```
 main create
 ```
-./run.sh
+
+> ./run.sh
 ```
 Create tables
 Host: kist User: queryuser Database: querydb
