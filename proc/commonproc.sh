@@ -5,6 +5,8 @@
 # variables
 # ------------------
 
+REPDEL='|'
+
 required_var() {
   local -r VARIABLE=$1
   [ -z "${!VARIABLE}" ] && logfail "Need to set environment variable $VARIABLE"
@@ -36,6 +38,19 @@ touchlogfile() {
   local -r basedir=$(dirname "$LOGILE")
   createbasedir $LOGFILE
   touch $LOGFILE  
+}
+
+execute_withlog() {
+    local -r CMD="$@"
+    # important: some command are assuming the first line in the output is not relevant and remove it
+    # do not remove this log $CMD below
+    log "$CMD"
+    eval $CMD
+    if [ $? -ne 0 ]; then
+        # log CMD again, it can preceded by bunch of logs
+        log "$CMD"
+        logfail "Job failed"
+    fi
 }
 
 # -------------------------
@@ -92,6 +107,36 @@ calculatesec() {
   local -r after=`getsec`
   echo $(expr $after - $before)
 }
+
+getdate() {
+    echo `date +"%Y-%m-%d %H-%M-%S"`
+}
+
+# -----------------------
+# formated result table
+# -----------------------
+
+
+tsp() {
+    local -r MESS="$1"
+    local -r LEN=$2
+    local -r OUT=`printf "%-${LEN}s" "$MESS"`
+    echo "$OUT"
+}
+
+printreportline() {
+    local -r REPORTFILE=$1
+    shift
+    echo -n $REPDEL >>$REPORTFILE
+    while true; do
+        [ -z "$1" ] && break
+        O=`tsp "$1" $2`
+        echo -n " $O $REPDEL" >>$REPORTFILE
+        shift 2
+    done
+    echo >>$REPORTFILE
+}
+
 
 # --------------------------
 # commands

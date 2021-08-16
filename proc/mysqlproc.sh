@@ -19,4 +19,3 @@ mysqlexporttable() {
 
 required_listofcommands mysql
 required_listofvars DBHOST DBUSER DBPASSWORD DB
-
