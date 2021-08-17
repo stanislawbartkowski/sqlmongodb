@@ -1,5 +1,5 @@
 CREATE TABLE customers (
-  customerNumber int(11) NOT NULL,
+  customerNumber integer NOT NULL,
   customerName varchar(50) NOT NULL,
   contactLastName varchar(50) NOT NULL,
   contactFirstName varchar(50) NOT NULL,
@@ -10,24 +10,21 @@ CREATE TABLE customers (
   state varchar(50) DEFAULT NULL,
   postalCode varchar(15) DEFAULT NULL,
   country varchar(50) NOT NULL,
-  salesRepEmployeeNumber int(11) DEFAULT NULL,
+  salesRepEmployeeNumber integer DEFAULT NULL,
   creditLimit decimal(10,2) DEFAULT NULL,
-  PRIMARY KEY (customerNumber),
-  KEY salesRepEmployeeNumber (salesRepEmployeeNumber)
+  PRIMARY KEY (customerNumber)
   );
 
 CREATE TABLE employees (
-  employeeNumber int(11) NOT NULL,
+  employeeNumber integer NOT NULL,
   lastName varchar(50) NOT NULL,
   firstName varchar(50) NOT NULL,
   extension varchar(10) NOT NULL,
   email varchar(100) NOT NULL,
   officeCode varchar(10) NOT NULL,
-  reportsTo int(11) DEFAULT NULL,
+  reportsTo integer DEFAULT NULL,
   jobTitle varchar(50) NOT NULL,
-  PRIMARY KEY (employeeNumber),
-  KEY reportsTo (reportsTo),
-  KEY officeCode (officeCode)
+  PRIMARY KEY (employeeNumber)
 ) ;
 
 CREATE TABLE offices (
@@ -44,28 +41,27 @@ CREATE TABLE offices (
 ) ;
 
 CREATE TABLE orderdetails (
-  orderNumber int(11) NOT NULL,
+  orderNumber integer NOT NULL,
   productCode varchar(15) NOT NULL,
-  quantityOrdered int(11) NOT NULL,
+  quantityOrdered integer NOT NULL,
   priceEach decimal(10,2) NOT NULL,
-  orderLineNumber smallint(6) NOT NULL,
+  orderLineNumber smallint NOT NULL,
   PRIMARY KEY (orderNumber,productCode)
 ) ;
 
 CREATE TABLE orders (
-  orderNumber int(11) NOT NULL,
+  orderNumber integer NOT NULL,
   orderDate date NOT NULL,
   requiredDate date NOT NULL,
   shippedDate date DEFAULT NULL,
   status varchar(15) NOT NULL,
-  comments text,
-  customerNumber int(11) NOT NULL,
-  KEY customerNumber (customerNumber),
+  comments varchar(4000),
+  customerNumber integer NOT NULL,
   PRIMARY KEY (orderNumber)
 ) ;
 
 CREATE TABLE payments (
-  customerNumber int(11) NOT NULL,
+  customerNumber integer NOT NULL,
   checkNumber varchar(50) NOT NULL,
   paymentDate date NOT NULL,
   amount decimal(10,2) NOT NULL,
@@ -75,8 +71,8 @@ CREATE TABLE payments (
 CREATE TABLE productlines (
   productLine varchar(50) NOT NULL,
   textDescription varchar(4000) DEFAULT NULL,
-  htmlDescription mediumtext,
-  image mediumblob,
+  htmlDescription varchar(4000),
+  image blob,
   PRIMARY KEY (productLine)
 ) ;
 
@@ -86,11 +82,10 @@ CREATE TABLE products (
   productLine varchar(50) NOT NULL,
   productScale varchar(10) NOT NULL,
   productVendor varchar(50) NOT NULL,
-  productDescription text NOT NULL,
-  quantityInStock smallint(6) NOT NULL,
+  productDescription varchar(4000) NOT NULL,
+  quantityInStock smallint NOT NULL,
   buyPrice decimal(10,2) NOT NULL,
   MSRP decimal(10,2) NOT NULL,
-  KEY productLine (productLine),
   PRIMARY KEY (productCode)
 ) ;
 

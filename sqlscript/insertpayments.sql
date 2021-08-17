@@ -1,6 +1,6 @@
-/*Data for the table `payments` */
+/*Data for the table payments */
 
-insert  into `payments`(`customerNumber`,`checkNumber`,`paymentDate`,`amount`) values 
+insert  into payments(customerNumber,checkNumber,paymentDate,amount) values 
 
 (103,'HQ336336','2004-10-19','6066.78'),
 

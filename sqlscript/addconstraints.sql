@@ -1,3 +1,5 @@
+
+-- foreign keys
 ALTER TABLE customers ADD CONSTRAINT customers_ibfk_1 FOREIGN KEY (salesRepEmployeeNumber) REFERENCES employees (employeeNumber);
 
 ALTER TABLE employees ADD CONSTRAINT employees_ibfk_1 FOREIGN KEY (reportsTo) REFERENCES employees (employeeNumber);
@@ -11,3 +13,15 @@ ALTER TABLE payments ADD CONSTRAINT payments_ibfk_1 FOREIGN KEY (customerNumber)
 ALTER TABLE products ADD CONSTRAINT products_ibfk_1 FOREIGN KEY (productLine) REFERENCES productlines (productLine);
 
 ALTER TABLE orders ADD CONSTRAINT orders_ibfk_1 FOREIGN KEY (customerNumber) REFERENCES customers (customerNumber);
+
+-- indexes
+CREATE INDEX customers_salesRepEmployeeNumber ON customers (salesRepEmployeeNumber);
+
+CREATE INDEX employees_reportsTo ON employees (reportsTo);
+CREATE INDEX employees_officeCode ON employees (officeCode);
+
+CREATE INDEX orders_customerNumber on orders(customerNumber);
+
+CREATE INDEX products_productLine on products(productLine);
+
+

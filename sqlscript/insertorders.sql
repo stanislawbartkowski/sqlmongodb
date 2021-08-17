@@ -1,6 +1,6 @@
-/*Data for the table `orders` */
+/*Data for the table orders */
 
-insert  into `orders`(`orderNumber`,`orderDate`,`requiredDate`,`shippedDate`,`status`,`comments`,`customerNumber`) values 
+insert  into orders(orderNumber,orderDate,requiredDate,shippedDate,status,comments,customerNumber) values 
 
 (10100,'2003-01-06','2003-01-13','2003-01-10','Shipped',NULL,363),
 
@@ -130,13 +130,13 @@ insert  into `orders`(`orderNumber`,`orderDate`,`requiredDate`,`shippedDate`,`st
 
 (10163,'2003-10-20','2003-10-27','2003-10-24','Shipped',NULL,424),
 
-(10164,'2003-10-21','2003-10-30','2003-10-23','Resolved','This order was disputed, but resolved on 11/1/2003; Customer doesn\'t like the colors and precision of the models.',452),
+(10164,'2003-10-21','2003-10-30','2003-10-23','Resolved','This order was disputed, but resolved on 11/1/2003; Customer doesnt like the colors and precision of the models.',452),
 
-(10165,'2003-10-22','2003-10-31','2003-12-26','Shipped','This order was on hold because customers\'s credit limit had been exceeded. Order will ship when payment is received',148),
+(10165,'2003-10-22','2003-10-31','2003-12-26','Shipped','This order was on hold because customers s credit limit had been exceeded. Order will ship when payment is received',148),
 
 (10166,'2003-10-21','2003-10-30','2003-10-27','Shipped',NULL,462),
 
-(10167,'2003-10-23','2003-10-30',NULL,'Cancelled','Customer called to cancel. The warehouse was notified in time and the order didn\'t ship. They have a new VP of Sales and are shifting their sales model. Our VP of Sales should contact them.',448),
+(10167,'2003-10-23','2003-10-30',NULL,'Cancelled','Customer called to cancel. The warehouse was notified in time and the order didnt ship. They have a new VP of Sales and are shifting their sales model. Our VP of Sales should contact them.',448),
 
 (10168,'2003-10-28','2003-11-03','2003-11-01','Shipped',NULL,161),
 
@@ -456,7 +456,7 @@ insert  into `orders`(`orderNumber`,`orderDate`,`requiredDate`,`shippedDate`,`st
 
 (10326,'2004-11-09','2004-11-16','2004-11-10','Shipped',NULL,144),
 
-(10327,'2004-11-10','2004-11-19','2004-11-13','Resolved','Order was disputed and resolved on 12/1/04. The Sales Manager was involved. Customer claims the scales of the models don\'t match what was discussed.',145),
+(10327,'2004-11-10','2004-11-19','2004-11-13','Resolved','Order was disputed and resolved on 12/1/04. The Sales Manager was involved. Customer claims the scales of the models dont match what was discussed.',145),
 
 (10328,'2004-11-12','2004-11-21','2004-11-18','Shipped','Customer very concerned about the exact color of the models. There is high risk that he may dispute the order because there is a slight color mismatch',278),
 
@@ -536,7 +536,7 @@ insert  into `orders`(`orderNumber`,`orderDate`,`requiredDate`,`shippedDate`,`st
 
 (10366,'2005-01-10','2005-01-19','2005-01-12','Shipped',NULL,381),
 
-(10367,'2005-01-12','2005-01-21','2005-01-16','Resolved','This order was disputed and resolved on 2/1/2005. Customer claimed that container with shipment was damaged. FedEx\'s investigation proved this wrong.',205),
+(10367,'2005-01-12','2005-01-21','2005-01-16','Resolved','This order was disputed and resolved on 2/1/2005. Customer claimed that container with shipment was damaged. FedExs investigation proved this wrong.',205),
 
 (10368,'2005-01-19','2005-01-27','2005-01-24','Shipped','Can we renegotiate this one?',124),
 
@@ -574,7 +574,7 @@ insert  into `orders`(`orderNumber`,`orderDate`,`requiredDate`,`shippedDate`,`st
 
 (10385,'2005-02-28','2005-03-09','2005-03-01','Shipped',NULL,124),
 
-(10386,'2005-03-01','2005-03-09','2005-03-06','Resolved','Disputed then Resolved on 3/15/2005. Customer doesn\'t like the craftsmaship of the models.',141),
+(10386,'2005-03-01','2005-03-09','2005-03-06','Resolved','Disputed then Resolved on 3/15/2005. Customer doesnt like the craftsmaship of the models.',141),
 
 (10387,'2005-03-02','2005-03-09','2005-03-06','Shipped','We need to keep in close contact with their Marketing VP. He is the decision maker for all their purchases.',148),
 
@@ -625,18 +625,17 @@ insert  into `orders`(`orderNumber`,`orderDate`,`requiredDate`,`shippedDate`,`st
 (10410,'2005-04-29','2005-05-10','2005-04-30','Shipped',NULL,357),
 
 (10411,'2005-05-01','2005-05-08','2005-05-06','Shipped',NULL,233),
-
 (10412,'2005-05-03','2005-05-13','2005-05-05','Shipped',NULL,141),
 
 (10413,'2005-05-05','2005-05-14','2005-05-09','Shipped','Customer requested that DHL is used for this shipping',175),
 
 (10414,'2005-05-06','2005-05-13',NULL,'On Hold','Customer credit limit exceeded. Will ship when a payment is received.',362),
 
-(10415,'2005-05-09','2005-05-20','2005-05-12','Disputed','Customer claims the scales of the models don\'t match what was discussed. I keep all the paperwork though to prove otherwise',471),
+(10415,'2005-05-09','2005-05-20','2005-05-12','Disputed','Customer claims the scales of the models dont match what was discussed. I keep all the paperwork though to prove otherwise',471),
 
 (10416,'2005-05-10','2005-05-16','2005-05-14','Shipped',NULL,386),
 
-(10417,'2005-05-13','2005-05-19','2005-05-19','Disputed','Customer doesn\'t like the colors and precision of the models.',141),
+(10417,'2005-05-13','2005-05-19','2005-05-19','Disputed','Customer doesnt like the colors and precision of the models.',141),
 
 (10418,'2005-05-16','2005-05-24','2005-05-20','Shipped',NULL,412),
 

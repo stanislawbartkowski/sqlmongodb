@@ -41,7 +41,7 @@ inserttable() {
 
 createtables() {
     log "Create tables"
-    executescript sqlscript/createtable.sql 
+    executescript sqlscript/createtable.sql
     [ $? -eq 0 ] || logfail "Creating tables failed"
     log "Create constraints"
     executescript sqlscript/addconstraints.sql

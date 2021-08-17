@@ -1,4 +1,4 @@
-insert  into `orderdetails`(`orderNumber`,`productCode`,`quantityOrdered`,`priceEach`,`orderLineNumber`) values 
+insert  into orderdetails(orderNumber,productCode,quantityOrdered,priceEach,orderLineNumber) values 
 
 (10100,'S18_1749',30,'136.00',3),
 

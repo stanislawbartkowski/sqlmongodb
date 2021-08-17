@@ -1,10 +1,18 @@
-DBTYPE=mysql
-DBHOST=kist
-DBUSER=query
-DBPASSWORD=secret
+#DBTYPE=mysql
+#DBHOST=kist
+#DBUSER=queryuser
+#DBPASSWORD=secret
+#DB=querydb
+
+DBTYPE=db2
+DBUSER=db2inst1
+DBPASSWORD=secret123
 DB=querydb
+
 
 EXPDIR=export
 
-MONGOURI="mongodb://admin:secret@kist/querydb"
+#MONGOURI="mongodb://dbAdmin:secret@kist/querydb"
+MONGOURI="mongodb://dbOwner:secret@kist/querydb"
+#MONGOURI="mongodb://importUser:secret@kist/querydb"
 MONGODB=querydb
