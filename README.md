@@ -116,6 +116,37 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 
 ```
 
+# Insert data into DB2 database
+
+## Catalog
+
+Catalog DB2 database using *db2* command line. Example
+
+> db2 catalog tcpip node db2cont remote thinkde server 50000<br>
+> db2 catalog database querydb at node db2cont<br>
+
+## Configure
+
+> vi resource.rc<br>
+
+| Parameter | Description | Sample
+| ---- | ----- | ---- |
+| DBTYPE | db2 |
+| DBUSER | Database user name | db2inst1
+| DBPASSWORD | Password | secret
+| DB | Database name | querydb
+
+## Create schema and insert data
+
+> vi run.sh<br>
+```
+main test
+main drop
+main create
+main insert
+```
+> ./run.sh
+
 # Insert data into MongoDB collection
 
 ## Export data to CSV
