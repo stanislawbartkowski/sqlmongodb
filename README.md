@@ -135,6 +135,80 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 | DBPASSWORD | secret
 | DB | querydb
 
+## Test connection
+
+> vi run.sh<br>
+
+Uncomment.
+```
+main test
+```
+> ./run.sh
+```
+Test psql connection
+Did not find any relations.
+OK
+```
+
+## Create tables
+
+> vi run.sh<br>
+
+Uncomment
+```
+main create
+```
+
+> ./run.sh
+```
+Create tables
+CREATE TABLE customers (
+CREATE TABLE employees (
+CREATE TABLE offices (
+CREATE TABLE orderdetails (
+CREATE TABLE orders (
+CREATE TABLE payments (
+CREATE TABLE productlines (
+CREATE TABLE products (
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+...
+Create constraints
+ALTER TABLE
+ALTER TABLE
+....
+CREATE INDEX
+CREATE INDEX
+...
+```
+## Load data
+> vi run.sh<br>
+
+Uncomment
+```
+main insert
+```
+
+> ./run.sh
+```
+Insert offices
+INSERT 0 7
+Insert employees
+INSERT 0 23
+Insert customers
+INSERT 0 122
+Insert orders
+INSERT 0 326
+Insert productlines
+INSERT 0 7
+Insert products
+INSERT 0 110
+Insert orderdetails
+INSERT 0 2996
+Insert payments
+INSERT 0 273
+```
 
 # Insert data into DB2 database
 
