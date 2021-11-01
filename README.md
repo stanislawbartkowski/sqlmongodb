@@ -116,6 +116,26 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 
 ```
 
+# Insert into PostreSQL database
+
+## Create user and database
+
+> CREATE USER queryuser WITH PASSWORD 'secret';<br>
+> create database querydb with owner queryuser;<br>
+
+## Configure access 
+
+> vi resource.rc<br>
+
+| Parameter | Value
+| --- | ---- |
+| DBTYPE | psql
+| DBHOST | kist
+| DBUSER | queryuser
+| DBPASSWORD | secret
+| DB | querydb
+
+
 # Insert data into DB2 database
 
 ## Catalog
